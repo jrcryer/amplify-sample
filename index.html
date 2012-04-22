@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Amplify Sample</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/app.css"/>
+    </head>
+    <body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#">Amplify Sample</a>
+                    <ul class="nav">
+                      <li><a href="#" id="add-employee" data-controls-modal="add-employee-modal">Add employee</a></li>
+                      <li><a href="#" id="push-data">Push data to server</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>Employees</h1>
+                    </div>
+                    <div id="alert-area"></div>
+                    <table id="employee-table" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th> First Name </th>
+                                <th> Last Name </th>
+                                <th> Role </th>
+                                <th> Date Employed </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="add-employee-modal" class="modal fade">
+            <div class="modal-header">
+                <a href="#" class="close">x</a>
+                <h3>Add an Employee</h3>
+            </div>
+            <div class="modal-body">
+                <form id="employee-form">
+                    <div class="clearfix">
+                        <label for="firstName">First Name:</label>
+                        <div class="input">
+                            <input type="text" name="firstName" placeholder="John"/>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <label for="lastName">Last Name:</label>
+                        <div class="input">
+                            <input type="text" name="lastName" placeholder="Doe"/>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <label for="role">Role:</label>
+                        <div class="input">
+                            <input type="text" name="role" placeholder="Designer"/>
+                        </div>
+                    </div>
+                </form>
+           </div>
+           <div class="modal-footer">
+               <button class="btn" data-dismiss="modal">Cancel</button>
+               <button id="create-employee" class="btn btn-primary">Add</button>
+            </div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="lib/amplify.js"></script>
+        <script src="lib/bootstrap.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
